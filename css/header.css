@@ -1,0 +1,78 @@
+
+.header {
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-family);
+  box-shadow: var(--box-shadow);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.logo {
+  font-size: 0.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo span {
+  
+  font-size: 14px;
+	place-self: center;
+	background: linear-gradient(90deg, #00f, #0ff, #00f) -100%/ 200%;
+	/* being excessively careful with compat, 
+	 * though this has been supported unprefixed and 
+	 * in the shorthand across major browsers for a while */
+	-webkit-background-clip: text;
+	        background-clip: text;
+	/* use color, don't use -webkit-text-fill-color anymore, 
+	 * was meant to solve a problem we haven't had in years */
+	color: transparent;
+	font: 900 clamp(2em, 10vw, 10em) exo, sans-serif;
+	animation: shimmer 2s linear infinite
+}
+
+@keyframes shimmer { to { background-position: 100% } }
+.logo i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a i {
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
