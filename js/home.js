@@ -15,7 +15,6 @@ async function HomePage() {
    
    // --- Fetch Data ---
    const data = await fetchdata();
-   console.log(data)
    const userData = data.data.user[0];
    const userLevel = data.data.levels.aggregate.max.amount;
    const totalXp = data.data.totalxpamount.aggregate.sum.amount;

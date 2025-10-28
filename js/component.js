@@ -1,7 +1,5 @@
 export function Header(data = {}) {
-  console.log(data.avatarUrl)
-  console.log(data.login)
-  console.log(data.lastName)
+  
   const header = document.createElement("header");
   header.classList.add("header");
 
@@ -341,9 +339,10 @@ export function createXpGraph(data) {
 
 
 export function createSkillsRadarChart(skillsData) {
+  
     // Aggregate skills by type, taking the max amount
     const skillMax = skillsData.reduce((acc, skill) => {
-        const cleanType = skill.type.replace('kill_', '');
+        const cleanType = skill.type.replace('skill_', '');
         acc[cleanType] = Math.max(acc[cleanType] || 0, skill.amount);
         return acc;
     }, {});
@@ -402,6 +401,8 @@ export function createSkillsRadarChart(skillsData) {
             svg.appendChild(point);
         }
     });
+
+
 
     // Calculate data points using fixed 100 scale
     const dataPoints = skills.map((skill, i) => {
