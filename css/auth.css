@@ -7,7 +7,7 @@
   padding: 1rem;
 }
 body {
-    background-image: url("https://wallpapersok.com/images/hd/a-blue-background-with-a-circular-shape-8ud1fgpt22qs67c7.jpg");
+    background-color: green;
     background-size: cover; /* Mabackgrand.jpgkes the image fill the screen */
     background-repeat: no-repeat; /* Prevents tiling */
     background-position: center; /* Centers the image */

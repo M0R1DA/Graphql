@@ -1,7 +1,9 @@
 import { Auth, logOut } from "./auth.js";
 import { HomePage } from "./home.js";
 async function main() {
-    let token = sessionStorage.getItem("token");
+let token = localStorage.getItem("JWT_TOKEN");
+
+    
     if (!token) {
         await Auth();    
     } else {

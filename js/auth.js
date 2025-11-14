@@ -34,7 +34,7 @@ document.body.append(login)
     const data = await res.json();
 
 
-    sessionStorage.setItem("token", data); // or data.token if response includes a ke
+    localStorage.setItem("JWT_TOKEN", data); // or data.token if response includes a key named 'token'z
     await HomePage()
     logOut()
   });
@@ -45,7 +45,7 @@ export  function logOut(){
  
   if (logout) {
     logout.addEventListener("click", ()=>{
-      sessionStorage.clear()
+      localStorage.clear()
       location.reload()
     })
   }
