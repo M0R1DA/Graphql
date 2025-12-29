@@ -102,7 +102,9 @@ export function sectiondata(data = {}) {
 
   userDetails.forEach(({ label, value }) => {
     let p = document.createElement("p");
-    p.innerHTML = `<strong>${label}:</strong> ${value || ''}`;
+    
+    const val = value ? value : ''
+    p.innerHTML = `<strong>${label}:</strong> ${value }`;
     userDiv.appendChild(p);
   });
 
